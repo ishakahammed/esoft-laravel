@@ -18,7 +18,7 @@ class CategoryController extends Controller
     	return view('admin.add_category');
     }
 
-    public function all_category()
+    protected function all_category()
     {
     	$this->AdminAuthCheck();
     	$all_category_info=DB::table('tbl_category')->get();
@@ -95,7 +95,7 @@ class CategoryController extends Controller
     	return Redirect::to('/all-category');
     }
 
-    public function AdminAuthCheck()
+    private function AdminAuthCheck()
     {
         $admin_id=Session::get('admin_id');
         if ($admin_id) {

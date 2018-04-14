@@ -32,7 +32,7 @@ class UserController extends Controller
     	return Redirect::to('/add-user');
     }
 
-    public function manage_user()
+    protected function manage_user()
     {
      
       $all_customer_info=DB::table('tbl_customer')->get();
@@ -44,7 +44,7 @@ class UserController extends Controller
     }
 
 
-    public function delete_user($customer_id)
+    protected function delete_user($customer_id)
     {
     	DB::table('tbl_customer')
     	->where('customer_id',$customer_id)

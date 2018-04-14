@@ -66,8 +66,8 @@
 							<a class="btn btn-info" href="{{URL::to('/view-order/'.$v_order->order_id)}}">
 								<i class="halflings-icon white view"></i>  
 							</a>
-							<a class="btn btn-danger" href="{{URL::to('/delete/'.$v_order->order_id)}}" id="delete">
-								<i class="halflings-icon white trash"></i> 
+							<a class="btn btn-danger" href="{{URL::to('/delete-order/'.$v_order->order_id)}}" id="delete">
+								<i class="halflings-icon white trash"></i>
 							</a>
 						</td>
 						</tr>				

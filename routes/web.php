@@ -40,6 +40,8 @@ Route::get('/manage-order', 'CheckoutController@manage_order');
 Route::get('/view-order/{order_id}', 'CheckoutController@view_order');
 Route::get('/unactive_order/{order_id}', 'CheckoutController@unactive_order');
 Route::get('/active_order/{order_id}', 'CheckoutController@active_order');
+Route::get('/delete-order/{order_id}', 'CheckoutController@delete_order');
+
 
 //customer login logout
 Route::post('/customer_login', 'CheckoutController@customer_login');

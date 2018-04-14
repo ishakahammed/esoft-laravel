@@ -209,5 +209,14 @@ class CheckoutController extends Controller
       return Redirect::to('/manage-order');
     }
 
+    public function delete_order($order_id)
+    {
+      DB::table('tbl_order')
+      ->where('order_id',$order_id)
+      ->delete();
+      Session::get('message','order Deleted Successfully');
+      return Redirect::to('/manage-order');
+    }
+
 
 }
